@@ -1,15 +1,7 @@
-import express from "express"
-const app = express()
-const port = 3000
+import dotenv from "dotenv";
+dotenv.config();
+// console.log(process.env.MONGODB_URL)
+import connectdb from "./db/db.connect.js";
 
-app.get('/', (req, res) => {
-  res.send('Hello akash')
-})
 
-app.get('/ash',(req,res)=>{
-  res.send('hi there you are on /ash ')
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+connectdb();
