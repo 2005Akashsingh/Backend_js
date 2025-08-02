@@ -10,3 +10,5 @@ const asyncHandler = (HandlerFunction) =>{
         }
     }
 }
+
+export {asyncHandler}
